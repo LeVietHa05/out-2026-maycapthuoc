@@ -50,7 +50,7 @@ export default function ConfirmPage() {
             <p className="mt-2 text-slate-600 dark:text-slate-300">{order.phone}</p>
           </div>
 
-          <div className="rounded-3xl border border-slate-200 bg-slate-50 p-6 dark:border-slate-700 dark:bg-slate-950">
+          <div className="flex flex-col items-center rounded-3xl border border-slate-200 bg-slate-50 p-6 dark:border-slate-700 dark:bg-slate-950">
             <div className="mb-4 text-sm font-semibold uppercase tracking-[0.2em] text-slate-500 dark:text-slate-400">
               QR Code
             </div>

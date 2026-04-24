@@ -16,8 +16,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'Medicine Sales Demo',
-  description: 'Demo Next.js medicine shop with language and theme persistence',
+  title: 'Medicine Vending Machine ',
+  description: 'Medicine Vending Machine website',
 };
 
 export default function RootLayout({
@@ -40,7 +40,7 @@ export default function RootLayout({
                     height={40}
                     className="rounded-full"
                   />
-                  <span className="text-xl font-bold">Medicine Shop</span>
+                  <span className="text-xl font-bold">Medicine Vending Machine</span>
                 </Link>
                 <nav className="flex space-x-6">
                   <Link
@@ -55,12 +55,12 @@ export default function RootLayout({
                   >
                     Danh sách thuốc
                   </Link>
-                  <Link
+                  {/* <Link
                     href="/admin"
                     className="text-white hover:text-accent transition-colors"
                   >
                     Quản trị
-                  </Link>
+                  </Link> */}
                 </nav>
               </div>
             </div>

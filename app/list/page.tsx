@@ -60,7 +60,7 @@ export default function ListPage() {
               </Link>
               <Link
                 href="/checkout"
-                className="inline-flex items-center justify-center rounded-full bg-blue-600 px-5 py-3 text-sm font-semibold text-white transition hover:bg-blue-700"
+                className="inline-flex items-center justify-center rounded-full bg-primary dark:bg-secondary px-5 py-3 text-sm font-semibold text-white transition hover:bg-blue-700"
               >
                 {t.checkout}
               </Link>
@@ -86,7 +86,7 @@ export default function ListPage() {
                             <h2 className="text-xl font-semibold">{medicine.name}</h2>
                             <p className="text-sm text-slate-500 dark:text-slate-400">{medicine.dosage}</p>
                           </div>
-                          <div className="rounded-full bg-blue-600 px-4 py-2 text-sm font-semibold text-white">
+                          <div className="rounded-full bg-primary px-4 py-2 text-sm font-semibold text-white">
                             {medicine.price.toLocaleString()} đ
                           </div>
                         </div>
@@ -94,14 +94,14 @@ export default function ListPage() {
                         <div className="flex flex-wrap items-center gap-3">
                           <button
                             onClick={() => updateItem(medicine.id, Math.max(0, quantity - 1))}
-                            className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-slate-300 bg-white text-xl font-semibold text-slate-700 transition hover:border-blue-400 hover:text-blue-600 dark:border-slate-700 dark:bg-slate-950 dark:text-slate-100"
+                            className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-slate-300 bg-white text-xl font-semibold text-slate-700 transition hover:border-blue-400 hover:text-primary dark:border-slate-700 dark:bg-slate-950 dark:text-slate-100"
                           >
                             −
                           </button>
                           <span className="min-w-[2rem] text-center text-lg font-semibold">{quantity}</span>
                           <button
                             onClick={() => addItem(medicine.id, 1)}
-                            className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-slate-300 bg-white text-xl font-semibold text-slate-700 transition hover:border-blue-400 hover:text-blue-600 dark:border-slate-700 dark:bg-slate-950 dark:text-slate-100"
+                            className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-slate-300 bg-white text-xl font-semibold text-slate-700 transition hover:border-blue-400 hover:text-primary dark:border-slate-700 dark:bg-slate-950 dark:text-slate-100"
                           >
                             +
                           </button>
@@ -109,7 +109,7 @@ export default function ListPage() {
                         <div className="flex flex-wrap gap-3">
                           <button
                             onClick={() => addItem(medicine.id, 1)}
-                            className="rounded-full bg-blue-600 px-4 py-2 text-sm font-semibold text-white transition hover:bg-blue-700"
+                            className="rounded-full bg-primary px-4 py-2 text-sm font-semibold text-white transition hover:bg-blue-700"
                           >
                             {t.addToCart}
                           </button>
@@ -123,7 +123,7 @@ export default function ListPage() {
                           )}
                           <Link
                             href={`/detail/${medicine.id}`}
-                            className="rounded-full border border-slate-300 px-4 py-2 text-sm font-semibold text-slate-900 transition hover:border-blue-400 hover:text-blue-600 dark:border-slate-700 dark:text-slate-100 dark:hover:bg-slate-900"
+                            className="rounded-full border border-slate-300 px-4 py-2 text-sm font-semibold text-slate-900 transition hover:border-blue-400 hover:text-primary dark:border-slate-700 dark:text-slate-100 dark:hover:bg-slate-900"
                           >
                             {t.viewDetails}
                           </Link>
@@ -158,7 +158,7 @@ export default function ListPage() {
                   </div>
                   <Link
                     href="/checkout"
-                    className="inline-flex w-full items-center justify-center rounded-full bg-blue-600 px-4 py-3 text-sm font-semibold text-white transition hover:bg-blue-700"
+                    className="inline-flex w-full items-center justify-center rounded-full bg-primary dark:bg-secondary px-4 py-3 text-sm font-semibold text-white transition hover:bg-blue-700"
                   >
                     {t.checkout}
                   </Link>
