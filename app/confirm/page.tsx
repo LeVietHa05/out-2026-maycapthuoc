@@ -43,7 +43,7 @@ export default function ConfirmPage() {
 
   return (
     <div className="min-h-screen bg-slate-50 px-6 py-12 text-slate-900 dark:bg-slate-950 dark:text-slate-100">
-      <div className="mx-auto max-w-4xl rounded-[2rem] bg-white p-10 shadow-2xl ring-1 ring-slate-200 dark:bg-slate-900 dark:ring-slate-700">
+      <div className="mx-auto max-w-4xl rounded-[2rem] bg-white p-6 sm:p-10 shadow-2xl ring-1 ring-slate-200 dark:bg-slate-900 dark:ring-slate-700">
         <div className="space-y-6">
           <div>
             <h1 className="text-3xl font-bold">{t.lastOrder}</h1>

@@ -84,8 +84,8 @@ export default function CheckoutPage() {
 
   return (
     <div className="min-h-screen bg-background px-6 py-12 text-foreground">
-      <div className="mx-auto max-w-6xl space-y-8">
-        <div className="rounded-[2rem] bg-white p-10 shadow-2xl ring-1 ring-slate-200 dark:bg-slate-900 dark:ring-slate-700">
+      <div className="mx-auto max-w-5xl space-y-8">
+        <div className="rounded-[2rem] bg-white p-6 sm:p-10 shadow-2xl ring-1 ring-slate-200 dark:bg-slate-900 dark:ring-slate-700">
           <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
             <div>
               <h1 className="text-3xl font-bold">{t.checkout}</h1>
@@ -158,7 +158,7 @@ export default function CheckoutPage() {
                   <button
                     onClick={handleSubmit}
                     disabled={submitting}
-                    className="inline-flex w-full items-center justify-center rounded-full bg-blue-600 px-5 py-4 text-sm font-semibold text-white transition hover:bg-blue-700 disabled:cursor-not-allowed disabled:bg-blue-400"
+                    className="inline-flex w-full items-center justify-center rounded-full bg-primary px-5 py-4 text-sm font-semibold text-white transition hover:bg-blue-700 disabled:cursor-not-allowed disabled:bg-blue-400"
                   >
                     {submitting ? `${t.checkout}...` : t.receiveOrder}
                   </button>

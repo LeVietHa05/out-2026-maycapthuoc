@@ -125,10 +125,10 @@ export default function AdminPage() {
           </Link>
         </div>
 
-        <div className="flex flex-wrap gap-4 mb-8">
+        <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap mb-8">
           <button
             onClick={() => setActiveTab('medicines')}
-            className={`px-6 py-2 rounded-lg font-semibold transition ${
+            className={`block w-full sm:w-auto px-6 py-2 rounded-lg font-semibold transition ${
               activeTab === 'medicines'
                 ? 'bg-blue-600 text-white'
                 : 'bg-white text-slate-700 ring-1 ring-slate-200 dark:bg-slate-900 dark:text-slate-200 dark:ring-slate-700'
@@ -152,7 +152,7 @@ export default function AdminPage() {
           <div>
             <button
               onClick={handleAddMedicine}
-              className="mb-6 inline-flex items-center justify-center rounded-full bg-emerald-600 px-6 py-3 text-sm font-semibold text-white transition hover:bg-emerald-700"
+              className="mb-6 w-full max-w-xs rounded-full bg-emerald-600 px-6 py-3 text-sm font-semibold text-white transition hover:bg-emerald-700 sm:w-auto"
             >
               + {t.addNewMedicine}
             </button>
@@ -250,10 +250,10 @@ export default function AdminPage() {
                     rows={2}
                   />
                 </div>
-                <div className="mt-6 flex flex-wrap gap-3">
+                <div className="mt-6 flex flex-col gap-3 sm:flex-row">
                   <button
                     onClick={handleSaveMedicine}
-                    className="rounded-full bg-blue-600 px-5 py-3 text-sm font-semibold text-white transition hover:bg-blue-700"
+                    className="w-full rounded-full bg-blue-600 px-5 py-3 text-sm font-semibold text-white transition hover:bg-blue-700 sm:w-auto"
                   >
                     {t.save}
                   </button>
@@ -262,7 +262,7 @@ export default function AdminPage() {
                       setShowForm(false);
                       setEditingMedicine(null);
                     }}
-                    className="rounded-full bg-slate-400 px-5 py-3 text-sm font-semibold text-white transition hover:bg-slate-500"
+                    className="w-full rounded-full bg-slate-400 px-5 py-3 text-sm font-semibold text-white transition hover:bg-slate-500 sm:w-auto"
                   >
                     {t.cancel}
                   </button>
@@ -271,7 +271,7 @@ export default function AdminPage() {
             )}
 
             <div className="overflow-x-auto rounded-3xl bg-white shadow-sm ring-1 ring-slate-200 dark:bg-slate-900 dark:ring-slate-700">
-              <table className="w-full min-w-[720px] divide-y divide-slate-200 text-left text-sm dark:divide-slate-700">
+              <table className="w-full min-w-full divide-y divide-slate-200 text-left text-sm dark:divide-slate-700">
                 <thead className="bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-200">
                   <tr>
                     <th className="px-4 py-3">ID</th>
@@ -323,7 +323,7 @@ export default function AdminPage() {
               </div>
             ) : (
               <div className="overflow-x-auto rounded-3xl bg-white shadow-sm ring-1 ring-slate-200 dark:bg-slate-900 dark:ring-slate-700">
-                <table className="w-full min-w-[720px] divide-y divide-slate-200 text-left text-sm dark:divide-slate-700">
+                <table className="w-full min-w-full divide-y divide-slate-200 text-left text-sm dark:divide-slate-700">
                   <thead className="bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-200">
                     <tr>
                       <th className="px-4 py-3">{t.orderId}</th>

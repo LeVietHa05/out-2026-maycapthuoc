@@ -45,7 +45,7 @@ export default function ListPage() {
   return (
     <div className="min-h-screen bg-background px-6 py-12 text-foreground">
       <div className="mx-auto max-w-7xl space-y-8">
-        <div className="rounded-[2rem] bg-white p-10 shadow-2xl ring-1 ring-slate-200 dark:bg-slate-900 dark:ring-slate-700">
+        <div className="rounded-[2rem] bg-white p-6 sm:p-10 shadow-2xl ring-1 ring-slate-200 dark:bg-slate-900 dark:ring-slate-700">
           <div className="mb-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
             <div>
               <h1 className="text-3xl font-bold">{t.listPlaceholderTitle}</h1>
@@ -76,7 +76,7 @@ export default function ListPage() {
                     key={medicine.id}
                     className="rounded-3xl border border-slate-200 bg-slate-50 p-6 shadow-sm transition hover:border-blue-400 dark:border-slate-700 dark:bg-slate-900"
                   >
-                    <div className="grid gap-4 md:grid-cols-[120px_1fr] items-center">
+                    <div className="grid gap-4 grid-cols-1 md:grid-cols-[120px_1fr] items-center">
                       <div className="relative h-28 w-full overflow-hidden rounded-3xl bg-slate-200 dark:bg-slate-800">
                         <img src={medicine.image} alt={medicine.name} className="h-full w-full object-cover" />
                       </div>
@@ -135,7 +135,7 @@ export default function ListPage() {
               })}
             </div>
 
-            <div className="sticky top-6 self-start rounded-3xl border border-slate-200 bg-slate-50 p-6 shadow-sm dark:border-slate-700 dark:bg-slate-900">
+            <div className="lg:sticky lg:top-6 self-start rounded-3xl border border-slate-200 bg-slate-50 p-6 shadow-sm dark:border-slate-700 dark:bg-slate-900">
               <h2 className="text-xl font-semibold mb-4">{t.cartTotal}</h2>
               {cartItems.length === 0 ? (
                 <p className="text-slate-600 dark:text-slate-400">{t.emptyCart}</p>

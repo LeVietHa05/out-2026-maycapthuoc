@@ -59,7 +59,7 @@ export default function DetailPage() {
   return (
     <div className="min-h-screen bg-background px-6 py-12 text-foreground">
       <div className="mx-auto max-w-5xl space-y-8">
-        <div className="rounded-[2rem] bg-white p-10 shadow-2xl ring-1 ring-slate-200 dark:bg-slate-900 dark:ring-slate-700">
+        <div className="rounded-[2rem] bg-white p-6 sm:p-10 shadow-2xl ring-1 ring-slate-200 dark:bg-slate-900 dark:ring-slate-700">
           <div className="grid gap-8 lg:grid-cols-[1fr_1.4fr]">
             <div className="rounded-3xl overflow-hidden bg-slate-200 dark:bg-slate-800">
               <img src={medicine.image} alt={medicine.name} className="h-full w-full object-cover" />
