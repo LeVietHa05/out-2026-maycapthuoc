@@ -42,4 +42,5 @@ next-env.d.ts
 
 #AI
 .github/
- 
+
+public/data/orders.json
