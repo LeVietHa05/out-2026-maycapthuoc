@@ -1,16 +1,31 @@
 import { NextResponse } from 'next/server';
 import { promises as fs } from 'fs';
-import { join } from 'path';
+import { dirname, join } from 'path';
 import { Order } from '@/lib/types';
 
-const ordersFilePath = join(process.cwd(), 'public', 'data', 'orders.json');
+const ordersFilePath = process.platform === 'win32'
+  ? join(process.cwd(), 'tmp', 'orders.json')
+  : '/tmp/orders.json';
+
+async function ensureOrdersFile() {
+  const dir = dirname(ordersFilePath);
+  await fs.mkdir(dir, { recursive: true });
+
+  try {
+    await fs.access(ordersFilePath);
+  } catch {
+    await fs.writeFile(ordersFilePath, '[]', 'utf8');
+  }
+}
 
 async function readOrders(): Promise<Order[]> {
+  await ensureOrdersFile();
   const file = await fs.readFile(ordersFilePath, 'utf8');
   return JSON.parse(file) as Order[];
 }
 
 async function writeOrders(orders: Order[]) {
+  await ensureOrdersFile();
   await fs.writeFile(ordersFilePath, JSON.stringify(orders, null, 2), 'utf8');
 }
 
