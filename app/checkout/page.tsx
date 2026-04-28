@@ -69,6 +69,11 @@ export default function CheckoutPage() {
 
     try {
       await addOrder(order);
+      await fetch('/api/send-to-esp', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ msg: order.qrCode }),
+      });
       clearCart();
       router.push('/confirm');
     } catch (error) {
